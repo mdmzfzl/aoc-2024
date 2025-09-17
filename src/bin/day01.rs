@@ -7,11 +7,11 @@ const DAY: u8 = 1;
 fn main() {
     let input = read_input(DAY);
 
-    println!("Answer [Part 1]: {}", part1(parse_input(&input)));
-    println!("Answer [Part 2]: {}", part2(parse_input(&input)));
+    println!("Answer [Part 1]: {}", part1(parse(&input)));
+    println!("Answer [Part 2]: {}", part2(parse(&input)));
 }
 
-fn parse_input(input: &str) -> (Vec<u64>, Vec<u64>) {
+fn parse(input: &str) -> (Vec<u64>, Vec<u64>) {
     let pairs: Vec<(u64, u64)> = input
         .lines()
         .map(|line| {
